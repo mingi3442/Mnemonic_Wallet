@@ -45,11 +45,11 @@ export default function MakeWallet({ settingAddress }) {
     setMakeComplete(true);
   };
   const valid = () => {
-    //seed가 규격에 맞는 12의 단어인지 확인
     if (keystore.isSeedValid(seed)) {
       makeAddress(seed, password);
     }
   };
+
   useEffect(() => {
     makeTextFile();
     settingAddress(address.keystore, address.address);
